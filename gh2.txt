@@ -1,0 +1,11 @@
+describe("google dropdown",()=>{
+    it("search",()=>{
+        cy.visit("https://www.google.com/"); 
+    cy.get("#APjFqb").type("sachin");
+     cy.get(".wM6W7d > span").each(($el)=>{
+        if($el.text()==="sachin pilot"){
+            cy.wrap($el).click();
+        }
+     })//wrap=just take the value from $el and click
+    })
+    })
